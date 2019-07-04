@@ -51,4 +51,6 @@ attr_accessor :id, :name, :breed
     result = DB[:conn].execute(sql, id).flatten
     Dog.new(id: result[0], name:result[1], breed:result[2])
   end
+
+  def self.find_or_create_by
 end

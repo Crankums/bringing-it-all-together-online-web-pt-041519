@@ -67,6 +67,6 @@ attr_accessor :id, :name, :breed
     id = row[0]
     name = row[1]
     breed = [2]
-    new_dog = self.new(id:id, name:name, breed:breed)
+    self.new(id:id, name:name, breed:breed)
   end
 end

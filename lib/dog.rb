@@ -26,7 +26,7 @@ attr_accessor :id, :name, :breed
     # if self.id
     #   self.update
     # else
-    sql <<-SQL
+    sql = <<-SQL
       INSERT INTO dogs (name, breed)
       VALUES (?, ?)
     SQL

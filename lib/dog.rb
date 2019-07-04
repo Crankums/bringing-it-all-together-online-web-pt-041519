@@ -9,7 +9,7 @@ attr_accessor :id, :name, :breed
 
   def self.create_table
     sql = <<-SQL
-      CREATE TABLE dog (
+      CREATE TABLE IF NOT EXISTS dog (
         id INTEGER PRIMARY KEY,
         name TEXT,
         breed TEXT

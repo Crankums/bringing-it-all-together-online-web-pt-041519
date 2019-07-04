@@ -60,6 +60,6 @@ attr_accessor :id, :name, :breed
     else
       dog = self.create(name: name, breed: breed)
     end
-    song
+    dog
   end
 end

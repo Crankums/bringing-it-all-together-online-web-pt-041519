@@ -28,7 +28,7 @@ attr_accessor :id, :name, :breed
     # else
     sql <<-SQL
       INSERT INTO dogs (name, breed)
-      VALUES (?, ?) 
+      VALUES (?, ?)
     SQL
 
     DB[:conn].execute(sql, self.name, self.album)

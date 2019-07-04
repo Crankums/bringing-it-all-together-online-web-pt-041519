@@ -50,5 +50,5 @@ attr_accessor :id, :name, :breed
     SQL
     result = DB[:conn].execute(sql, id).flatten
     Dog.new(id, result[1], result[2])
-  end  
+  end
 end

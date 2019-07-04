@@ -77,6 +77,6 @@ attr_accessor :id, :name, :breed
       WHERE name = ?
     SQL
 
-    DB[:conn].execute(sql, name)
+    DB[:conn].execute(sql, self.name)
   end
 end

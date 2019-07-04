@@ -41,4 +41,14 @@ attr_accessor :id, :name, :breed
     dog.save
     dog
   end
+
+  def self.find_by_id(id)
+    sql = <<-SQL
+      SELECT *
+      FROM dogs
+      WHERE id = ?
+    SQL
+    result = DB[:conn].execute(sql, id).flatten
+    Dog.new(id, result[1], result[2])
+  end  
 end

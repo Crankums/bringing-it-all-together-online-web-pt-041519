@@ -66,7 +66,7 @@ attr_accessor :id, :name, :breed
   def self.new_from_db(row)
     id = row[0]
     name = row[1]
-    breed = [2]
-    self.new(id:id, name:name, breed:breed)
+    breed = row[2]
+    self.new(id: id, name: name, breed: breed)
   end
 end

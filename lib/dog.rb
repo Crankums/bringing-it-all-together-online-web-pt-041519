@@ -57,6 +57,6 @@ attr_accessor :id, :name, :breed
     'SELECT *
     FROM dogs
     WHERE name =?, breed = ?',
-    name, album)    
+    name, album)
   end
 end
